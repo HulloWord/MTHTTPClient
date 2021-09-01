@@ -19,6 +19,10 @@
 
 @implementation MTHTTPRequest
 
+- (NSString *)httpMethodString {
+    return _httpMethod==kMTHTTPMethod_GET?@"GET":@"POST";
+}
+
 + (MTHTTPRequest *)requestWithMethod:(MTHTTPMethod)httpMethod
                                  url:(NSString *)url
                                param:(NSDictionary*)param

@@ -23,6 +23,7 @@ typedef NS_ENUM(NSUInteger, MTHTTPMethod) {
 @property (nonatomic,strong,readonly) NSDictionary * headers;
 @property (nonatomic,assign,readonly) BOOL shouldLoadCache;
 
+- (NSString *)httpMethodString;
 
 + (MTHTTPRequest *)requestWithMethod:(MTHTTPMethod)httpMethod
                                  url:(NSString *)url

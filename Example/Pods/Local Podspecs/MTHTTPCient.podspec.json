@@ -20,8 +20,14 @@
   },
   "source_files": "MTHTTPCient/Classes/**/*",
   "dependencies": {
+    "MJRefresh": [
+
+    ],
     "AFNetworking": [
 
+    ],
+    "ReactiveObjC": [
+      "~> 3.1.1"
     ]
   }
 }

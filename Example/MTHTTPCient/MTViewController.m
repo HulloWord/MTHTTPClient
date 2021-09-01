@@ -10,6 +10,7 @@
 #import <MTHTTPCient/MTHTTPCient.h>
 #import <MTHTTPCient/MTHTTPCientCongfig.h>
 #import <MTHTTPCient/MTHTTPRequest.h>
+#import <MTHTTPCient/MTHTTPResponse.h>
 @interface MTViewController ()
 
 @end
@@ -20,8 +21,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    MTHTTPCient * client = [[MTHTTPCient alloc] initClientWithConfig:[MTHTTPCientCongfig defaultConfig]];
-    [client requestWithRequestObject:[MTHTTPRequest requestWithMethod:kMTHTTPMethod_GET url:@"/data/2.5/weather" param:@{@"appid": @"fd5489917aec099715785ebd7593340d", @"q": @"Shenzhen"}]];
+//    MTHTTPCient * client = [[MTHTTPCient alloc] initClientWithConfig:[MTHTTPCientCongfig defaultConfig]];
+//    MTHTTPCient * client = [[MTHTTPCient alloc] init];
+//    [client.config([MTHTTPCientCongfig defaultConfig]).request([MTHTTPRequest requestWithMethod:kMTHTTPMethod_GET url:@"/data/2.5/weather" param:@{@"appid": @"fd5489917aec099715785ebd7593340d", @"q": @"Shenzhen"}]) subscribeNext:^(id data) {
+//        NSLog(@"--> %@",data);
+//
+//    }];
+    
+    [[MTHTTPCient sharedInstance].request([MTHTTPRequest requestWithMethod:kMTHTTPMethod_GET url:@"/data/2.5/weather" param:@{@"appid": @"fd5489917aec099715785ebd7593340d", @"q": @"Shenzhen"}]) subscribeNext:^(id data) {
+        NSLog(@"--> %@",data);
+        
+    }];
+  
 }
 
 - (void)didReceiveMemoryWarning
