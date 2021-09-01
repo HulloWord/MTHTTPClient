@@ -7,7 +7,9 @@
 //
 
 #import "MTViewController.h"
-
+#import <MTHTTPCient/MTHTTPCient.h>
+#import <MTHTTPCient/MTHTTPCientCongfig.h>
+#import <MTHTTPCient/MTHTTPRequest.h>
 @interface MTViewController ()
 
 @end
@@ -18,6 +20,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    MTHTTPCient * client = [[MTHTTPCient alloc] initClientWithConfig:[MTHTTPCientCongfig defaultConfig]];
+    [client requestWithRequestObject:[MTHTTPRequest requestWithMethod:kMTHTTPMethod_GET url:@"/data/2.5/weather" param:@{@"appid": @"fd5489917aec099715785ebd7593340d", @"q": @"Shenzhen"}]];
 }
 
 - (void)didReceiveMemoryWarning

@@ -10,6 +10,11 @@
 #endif
 #endif
 
+#import "MTHTTPAPI.h"
+#import "MTHTTPCient.h"
+#import "MTHTTPCientCongfig.h"
+#import "MTHTTPRequest.h"
+#import "MTHTTPResponse.h"
 
 FOUNDATION_EXPORT double MTHTTPCientVersionNumber;
 FOUNDATION_EXPORT const unsigned char MTHTTPCientVersionString[];
