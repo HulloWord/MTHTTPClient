@@ -1,44 +1,15 @@
-#
-# Be sure to run `pod lib lint MTHTTPCient.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
+ 
 Pod::Spec.new do |s|
   s.name             = 'MTHTTPCient'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of MTHTTPCient.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/Tom.Liu/MTHTTPCient'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.summary          = '基于AFN和RAC的网络请求工具'
+  s.description      = '面对对象设计，基于AFN和RAC的网络请求工具，暂未加入缓存功能'
+  s.homepage         = 'https://github.com/lyleLH/MTHTTPClient'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Tom.Liu' => 'tomliu@yeahka.com' }
-  s.source           = { :git => 'https://github.com/Tom.Liu/MTHTTPCient.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  s.author           = { 'Tom Liu' => ' v2top1lyle@gmail.com }
+  s.source           = { :git => 'git@github.com:lyleLH/MTHTTPClient.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
-
   s.source_files = 'MTHTTPCient/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'MTHTTPCient' => ['MTHTTPCient/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-#   s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'MJRefresh'
   s.dependency 'AFNetworking'
   s.dependency 'ReactiveObjC', '~> 3.1.1'

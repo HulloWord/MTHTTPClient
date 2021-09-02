@@ -160,15 +160,30 @@ static MTHTTPCient * _instance = nil;
                                             options:0
                                             error:&error];
                        if(object){
-                           [subscriber sendNext: object];
+                           MTHTTPResponse *response = [[MTHTTPResponse alloc] initWithResponseSuccess:object code:statusCode];
+                           [subscriber sendNext: response];
                           
                        }else{
-                           [subscriber sendNext:@{@"error":@"数据解析失败"}];
+                           
+                           NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+                           userInfo[HTTPServiceErrorHTTPStatusCodeKey] = @(statusCode);
+                           userInfo[HTTPServiceErrorDescriptionKey] = @"数据解析失败";
+
+                           NSError *requestError = [NSError errorWithDomain:HTTPServiceErrorDomain code:statusCode userInfo:userInfo];
+                           MTHTTPResponse *response = [[MTHTTPResponse alloc] initWithResponseError:requestError code:statusCode msg:@"HTTP状态异常"];
+                           [subscriber sendNext:response];
                                               
                        }
                        [subscriber sendCompleted];
                    }else{
-                       [subscriber sendNext:@{@"error":@"HTTP响应失败"}];
+                       NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+                       userInfo[HTTPServiceErrorHTTPStatusCodeKey] = @(statusCode);
+                       userInfo[HTTPServiceErrorDescriptionKey] = @"HTTP状态异常";
+
+                       NSError *requestError = [NSError errorWithDomain:HTTPServiceErrorDomain code:statusCode userInfo:userInfo];
+                       //错误信息反馈回去了、可以在此做响应的弹窗处理，展示出服务器给我们的信息
+                       MTHTTPResponse *response = [[MTHTTPResponse alloc] initWithResponseError:requestError code:statusCode msg:@"HTTP状态异常"];
+                       [subscriber sendNext:response];
                        [subscriber sendCompleted];
                    }
                       
