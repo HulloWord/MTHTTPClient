@@ -7,10 +7,7 @@
 //
 
 #import "MTViewController.h"
-#import <MTHTTPClient/MTHTTPClient.h>
-#import <MTHTTPClient/MTHTTPClientCongfig.h>
-#import <MTHTTPClient/MTHTTPRequest.h>
-#import <MTHTTPClient/MTHTTPResponse.h>
+#import <MTHTTPClient/MTHTTPClientHeaders.h>
 @interface MTViewController ()
 
 @end

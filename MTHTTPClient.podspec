@@ -1,7 +1,7 @@
  
 Pod::Spec.new do |s|
   s.name             = 'MTHTTPClient'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = '基于AFN和RAC的网络请求工具'
   s.description      = '面对对象设计，基于AFN和RAC的网络请求工具，暂未加入缓存功能'
   s.homepage         = 'https://github.com/lyleLH/MTHTTPClient'

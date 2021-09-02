@@ -11,8 +11,9 @@
 #endif
 
 #import "MTHTTPAPI.h"
-#import "MTHTTPClientCongfig.h"
 #import "MTHTTPClient.h"
+#import "MTHTTPClientCongfig.h"
+#import "MTHTTPClientHeaders.h"
 #import "MTHTTPRequest.h"
 #import "MTHTTPResponse.h"
 
