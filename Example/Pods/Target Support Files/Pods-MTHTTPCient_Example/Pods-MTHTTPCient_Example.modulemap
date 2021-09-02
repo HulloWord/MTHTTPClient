@@ -1,6 +1,0 @@
-framework module Pods_MTHTTPCient_Example {
-  umbrella header "Pods-MTHTTPCient_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}

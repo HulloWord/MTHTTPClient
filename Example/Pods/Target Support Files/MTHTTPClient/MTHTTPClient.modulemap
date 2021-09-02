@@ -1,0 +1,6 @@
+framework module MTHTTPClient {
+  umbrella header "MTHTTPClient-umbrella.h"
+
+  export *
+  module * { export * }
+}

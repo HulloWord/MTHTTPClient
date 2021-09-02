@@ -2,15 +2,12 @@ use_frameworks!
 
 platform :ios, '9.0'
 
-target 'MTHTTPCient_Example' do
-  pod 'MTHTTPCient', :path => '../'
+target 'MTHTTPClient_Example' do
+  pod 'MTHTTPClient', :path => '../'
 
-  target 'MTHTTPCient_Tests' do
+  target 'MTHTTPClient_Tests' do
     inherit! :search_paths
 
-    pod 'Specta'
-    pod 'Expecta'
-    pod 'FBSnapshotTestCase'
-    pod 'Expecta+Snapshots'
+    
   end
 end

@@ -1,6 +1,0 @@
-framework module MTHTTPCient {
-  umbrella header "MTHTTPCient-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,0 +1,33 @@
+{
+  "name": "MTHTTPClient",
+  "version": "0.1.0",
+  "summary": "基于AFN和RAC的网络请求工具",
+  "description": "面对对象设计，基于AFN和RAC的网络请求工具，暂未加入缓存功能",
+  "homepage": "https://github.com/lyleLH/MTHTTPClient",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Tom Liu": " v2top1lyle@gmail.com"
+  },
+  "source": {
+    "git": "git@github.com:lyleLH/MTHTTPClient.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "MTHTTPClient/Classes/**/*",
+  "dependencies": {
+    "MJRefresh": [
+
+    ],
+    "AFNetworking": [
+
+    ],
+    "ReactiveObjC": [
+      "~> 3.1.1"
+    ]
+  }
+}

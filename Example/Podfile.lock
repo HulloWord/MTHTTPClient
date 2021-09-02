@@ -14,55 +14,32 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - Expecta (1.0.6)
-  - "Expecta+Snapshots (3.1.1)":
-    - Expecta (~> 1.0)
-    - FBSnapshotTestCase/Core (~> 2.0)
-    - Specta (~> 1.0)
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
   - MJRefresh (3.7.2)
-  - MTHTTPCient (0.1.0):
+  - MTHTTPClient (0.1.0):
     - AFNetworking
     - MJRefresh
     - ReactiveObjC (~> 3.1.1)
   - ReactiveObjC (3.1.1)
-  - Specta (1.0.7)
 
 DEPENDENCIES:
-  - Expecta
-  - "Expecta+Snapshots"
-  - FBSnapshotTestCase
-  - MTHTTPCient (from `../`)
-  - Specta
+  - MTHTTPClient (from `../`)
 
 SPEC REPOS:
   trunk:
     - AFNetworking
-    - Expecta
-    - "Expecta+Snapshots"
-    - FBSnapshotTestCase
     - MJRefresh
     - ReactiveObjC
-    - Specta
 
 EXTERNAL SOURCES:
-  MTHTTPCient:
+  MTHTTPClient:
     :path: "../"
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
-  "Expecta+Snapshots": dcff217eef506dabd6dfdc7864ea2da321fafbb8
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
-  MTHTTPCient: 6c0ef1f0b6e0c86f7713f2902db7a885b6205908
+  MTHTTPClient: a38a6c636cfb0166c7818f0f868d549a6d1f4127
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
-PODFILE CHECKSUM: 9919f538ece6640e97ed86ebb7930614ba6993b0
+PODFILE CHECKSUM: 38e409fea4674dd07c160e65adf453b884d414dd
 
 COCOAPODS: 1.10.2

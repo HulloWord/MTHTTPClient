@@ -1,9 +1,9 @@
-# MTHTTPCient
+# MTHTTPClient
 
-[![CI Status](https://img.shields.io/travis/Tom.Liu/MTHTTPCient.svg?style=flat)](https://travis-ci.org/Tom.Liu/MTHTTPCient)
-[![Version](https://img.shields.io/cocoapods/v/MTHTTPCient.svg?style=flat)](https://cocoapods.org/pods/MTHTTPCient)
-[![License](https://img.shields.io/cocoapods/l/MTHTTPCient.svg?style=flat)](https://cocoapods.org/pods/MTHTTPCient)
-[![Platform](https://img.shields.io/cocoapods/p/MTHTTPCient.svg?style=flat)](https://cocoapods.org/pods/MTHTTPCient)
+[![CI Status](https://img.shields.io/travis/Tom/MTHTTPClient.svg?style=flat)](https://travis-ci.org/Tom/MTHTTPClient)
+[![Version](https://img.shields.io/cocoapods/v/MTHTTPClient.svg?style=flat)](https://cocoapods.org/pods/MTHTTPClient)
+[![License](https://img.shields.io/cocoapods/l/MTHTTPClient.svg?style=flat)](https://cocoapods.org/pods/MTHTTPClient)
+[![Platform](https://img.shields.io/cocoapods/p/MTHTTPClient.svg?style=flat)](https://cocoapods.org/pods/MTHTTPClient)
 
 ## Example
 
@@ -13,17 +13,17 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-MTHTTPCient is available through [CocoaPods](https://cocoapods.org). To install
+MTHTTPClient is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'MTHTTPCient'
+pod 'MTHTTPClient'
 ```
 
 ## Author
 
-Tom.Liu, tomliu@yeahka.com
+Tom, v2top1lyle@gmail.com
 
 ## License
 
-MTHTTPCient is available under the MIT license. See the LICENSE file for more info.
+MTHTTPClient is available under the MIT license. See the LICENSE file for more info.
