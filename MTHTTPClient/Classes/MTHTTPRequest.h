@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+ 
 
 NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSUInteger, MTHTTPMethod) {
@@ -22,7 +23,6 @@ typedef NS_ENUM(NSUInteger, MTHTTPMethod) {
 @property (nonatomic,strong,readonly) NSDictionary * param;
 @property (nonatomic,strong,readonly) NSDictionary * headers;
 @property (nonatomic,assign,readonly) BOOL shouldLoadCache;
-
 - (NSString *)httpMethodString;
 
 + (MTHTTPRequest *)requestWithMethod:(MTHTTPMethod)httpMethod

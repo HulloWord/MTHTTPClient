@@ -31,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign)MTRequestContentType requrestContentType;
 @property (nonatomic,assign)MTResponseContentType responseContentType;
 
+@property (nonatomic,copy)NSString * strategyClassName;
+
 + (MTHTTPClientCongfig *)defaultConfig;
 
 @end

@@ -11,5 +11,6 @@
 #import <MTHTTPClient/MTHTTPClient.h>
 #import <MTHTTPClient/MTHTTPClientCongfig.h>
 #import <MTHTTPClient/MTHTTPRequest.h>
+#import <MTHTTPClient/MTHTTPBaseResponse.h>
 #import <MTHTTPClient/MTHTTPResponse.h>
 #endif /* MTHTTPClientHeaders_h */
