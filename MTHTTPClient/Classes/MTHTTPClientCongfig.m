@@ -26,7 +26,7 @@
 
 - (MTRequestContentType)requrestContentType {
     if(!_requrestContentType){
-        _requrestContentType = kMTRequestContentTypePlainText;
+        _requrestContentType = kMTRequestContentTypeJSON;
     }
     return _requrestContentType;
 }
