@@ -13,5 +13,6 @@ Pod::Spec.new do |s|
   s.dependency 'MJRefresh'
   s.dependency 'AFNetworking'
   s.dependency 'ReactiveObjC', '~> 3.1.1'
+  s.dependency 'MTCategoryComponent'
 
 end

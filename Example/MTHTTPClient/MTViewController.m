@@ -7,7 +7,7 @@
 //
 
 #import "MTViewController.h"
-#import <MTHTTPClient/MTHTTPClientHeaders.h>
+#import <MTHTTPClient/MTHTTPClientHeader.h>
 @interface MTViewController ()
 
 @end
@@ -18,10 +18,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [[MTHTTPClient sharedInstance].request([MTHTTPRequest requestWithMethod:kMTHTTPMethod_GET url:@"/data/2.5/weather" param:@{@"appid": @"fd5489917aec099715785ebd7593340d", @"q": @"Shenzhen"}]) subscribeNext:^(MTHTTPResponse * data) {
-        NSLog(@"--> %@",data.reqResult);
-        
-    }];
+//    [[MTHTTPClient sharedInstance].request([MTHTTPRequest requestWithMethod:kMTHTTPMethod_GET url:@"/data/2.5/weather" param:@{@"appid": @"fd5489917aec099715785ebd7593340d", @"q": @"Shenzhen"}]) subscribeNext:^(MTHTTPResponse * data) {
+//        NSLog(@"--> %@",data.reqResult);
+//        
+//    }];
 }
 
 - (void)didReceiveMemoryWarning

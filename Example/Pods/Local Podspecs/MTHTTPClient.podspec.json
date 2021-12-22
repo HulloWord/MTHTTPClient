@@ -1,6 +1,6 @@
 {
   "name": "MTHTTPClient",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "基于AFN和RAC的网络请求工具",
   "description": "面对对象设计，基于AFN和RAC的网络请求工具，暂未加入缓存功能",
   "homepage": "https://github.com/lyleLH/MTHTTPClient",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "git@github.com:lyleLH/MTHTTPClient.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "9.0"
@@ -28,6 +28,9 @@
     ],
     "ReactiveObjC": [
       "~> 3.1.1"
+    ],
+    "MTCategoryComponent": [
+
     ]
   }
 }

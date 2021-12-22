@@ -10,12 +10,15 @@
 #endif
 #endif
 
-#import "MTHTTPAPI.h"
-#import "MTHTTPClient.h"
-#import "MTHTTPClientCongfig.h"
-#import "MTHTTPClientHeaders.h"
+#import "MTHTTPRequest+Cache.h"
 #import "MTHTTPRequest.h"
-#import "MTHTTPResponse.h"
+#import "MTHTTPClient.h"
+#import "MTHTTPClientHeader.h"
+#import "MTNetworkReachable.h"
+#import "MTHTTPClientAPIProtocol.h"
+#import "MTHTTPClientConfigProtocol.h"
+#import "MTHTTPRequestResponseProtocol.h"
+#import "MTNetWorkTypeDefine.h"
 
 FOUNDATION_EXPORT double MTHTTPClientVersionNumber;
 FOUNDATION_EXPORT const unsigned char MTHTTPClientVersionString[];
