@@ -1,6 +1,6 @@
 {
   "name": "MTHTTPClient",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "summary": "基于AFN和RAC的网络请求工具",
   "description": "面对对象设计，基于AFN和RAC的网络请求工具，暂未加入缓存功能",
   "homepage": "https://github.com/lyleLH/MTHTTPClient",
@@ -13,12 +13,13 @@
   },
   "source": {
     "git": "git@github.com:lyleLH/MTHTTPClient.git",
-    "tag": "0.1.1"
+    "tag": "1.0.0"
   },
   "platforms": {
     "ios": "9.0"
   },
   "source_files": "MTHTTPClient/Classes/**/*",
+  "public_header_files": "AddressSearch/Classes/Public/**/*.h",
   "dependencies": {
     "MJRefresh": [
 

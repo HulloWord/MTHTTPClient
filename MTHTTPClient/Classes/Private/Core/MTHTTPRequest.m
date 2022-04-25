@@ -36,19 +36,64 @@
 
 }
 
--(void)printLogWithRequestID:(NSInteger)ID api:(NSString *)api response:(NSURLResponse *)response responseObject:(id)rawData error:(NSError *)error {
++ (void)printLogWithRequestID:(NSInteger)ID request:(MTHTTPRequest *)request response:(NSURLResponse *)response responseObject:(id)rawData error:(NSError *)error {
     NSString *result;
     if (rawData) {
-        result = [[NSString alloc]initWithData:rawData encoding:NSUTF8StringEncoding];
+        result = [[NSString alloc] initWithData:rawData encoding:NSUTF8StringEncoding];
     }
-     
-    NSLog(@"--- [%ld]   <<<  isFromCache:%@ %ld  %@  \n\n\n\n---",ID,[self.request.api useCache]?@"YES":@"NO",((NSHTTPURLResponse*)response).statusCode,result);
+    NSString * fullApi = [NSString stringWithFormat:@"%@%@", [[request configuration] baseUrl], [[request api] path]];
+    NSDictionary * params =[[request api] param];
     
-//    NSLog(@"---[  ] > URL:%@ , HTTPHeaders:%@",api,tempHeaders);
+    NSString * absoluteGETURL = [self generateGETAbsoluteURL:fullApi params:params];
     
+    BOOL useCache = NO;
+    if([request.api  respondsToSelector:@selector(useCache)]){
+        useCache = [request.api useCache] ;
+    }
+    NSLog(@" --- [%ld] <<< %@  %@ isFromCache:%@ HttpStatus:%ld   \n<<<  result:%@  \n<<<", ID,request.api.method ==MTHTTPMethodGET?@"GET":@"POST",absoluteGETURL ,useCache ? @"YES" : @"NO",((NSHTTPURLResponse *) response).statusCode,  result);
     if (error) {
         NSLog(@"\n\n===================== Error:%@ ======================",error);
     }
+}
+// 仅对一级字典结构起作用
++ (NSString *)generateGETAbsoluteURL:(NSString *)url params:(id)params {
+    if (params == nil || ![params isKindOfClass:[NSDictionary class]] || [params count] == 0) {
+        return url;
+    }
+    
+    NSString *queries = @"";
+    for (NSString *key in params) {
+        id value = [params objectForKey:key];
+        
+        if ([value isKindOfClass:[NSDictionary class]]) {
+            continue;
+        } else if ([value isKindOfClass:[NSArray class]]) {
+            continue;
+        } else if ([value isKindOfClass:[NSSet class]]) {
+            continue;
+        } else {
+            queries = [NSString stringWithFormat:@"%@%@=%@&",
+                       (queries.length == 0 ? @"&" : queries),
+                       key,
+                       value];
+        }
+    }
+    
+    if (queries.length > 1) {
+        queries = [queries substringToIndex:queries.length - 1];
+    }
+    
+    if (([url hasPrefix:@"http://"] || [url hasPrefix:@"https://"]) && queries.length > 1) {
+        if ([url rangeOfString:@"?"].location != NSNotFound
+            || [url rangeOfString:@"#"].location != NSNotFound) {
+            url = [NSString stringWithFormat:@"%@%@", url, queries];
+        } else {
+            queries = [queries substringFromIndex:1];
+            url = [NSString stringWithFormat:@"%@?%@", url, queries];
+        }
+    }
+    
+    return url.length == 0 ? queries : url;
 }
 
 @end
@@ -184,8 +229,8 @@ static int _requestId = 0;
                                                                                                     responseObject:responseObject
                                                                                                           andError:error];
               
-              if([customResponseObject respondsToSelector:@selector(printLogWithRequestID:api:response:responseObject:error:)]){
-                  [customResponseObject printLogWithRequestID:currentRequestId api:fullApi response:response responseObject:responseObject error:error];
+              if([responseClass respondsToSelector:@selector(printLogWithRequestID:request:response:responseObject:error:)]){
+                  [responseClass printLogWithRequestID:currentRequestId request:self response:response responseObject:responseObject error:error];
               }else{
                   NSString *result;
                   if (responseObject) {

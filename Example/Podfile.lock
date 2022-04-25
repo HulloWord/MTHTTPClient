@@ -49,7 +49,7 @@ PODS:
     - MBProgressHUD
     - MTCategoryComponent/UIKit/UIColor
     - Toast
-  - MTHTTPClient (0.1.1):
+  - MTHTTPClient (1.0.0):
     - AFNetworking
     - MJRefresh
     - MTCategoryComponent
@@ -82,10 +82,10 @@ SPEC CHECKSUMS:
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
   MTCategoryComponent: 097f709679feff15b613d575f42f4cddfbf6b980
-  MTHTTPClient: e6b0100abdeb72cc76205acd9c455f292317bd35
+  MTHTTPClient: 8892b74bd957228cbb322b5f8157fe51837ee2ba
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
 PODFILE CHECKSUM: 133dbced6a0527e9ebe1dbc7d3da17555de2f0c4
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

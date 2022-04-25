@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MTNetWorkTypeDefine.h"
-
+#import "MTHTTPRequestResponseProtocol.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol MTHTTPClientConfigProtocol <NSObject>
@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSTimeInterval)timeoutIntervalForRequest;
 - (MTRequestContentType)requestContentType;
 - (NSSet*)responseSerializer;
-- (Class)responseClass;
+- (Class<MTHTTPRequestResponseProtocol>)responseClass;
 - (NSString *)cerPath;
 @end
 

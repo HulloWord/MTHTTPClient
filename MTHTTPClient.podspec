@@ -10,9 +10,12 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'git@github.com:lyleLH/MTHTTPClient.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
   s.source_files = 'MTHTTPClient/Classes/**/*'
+  s.public_header_files = 'AddressSearch/Classes/Public/**/*.h'
+  
   s.dependency 'MJRefresh'
   s.dependency 'AFNetworking'
   s.dependency 'ReactiveObjC', '~> 3.1.1'
   s.dependency 'MTCategoryComponent'
+
 
 end

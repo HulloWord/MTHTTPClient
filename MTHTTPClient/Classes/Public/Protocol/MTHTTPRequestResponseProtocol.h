@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 /// 日志打印，默认有输出
-- (void)printLogWithRequestID:(NSInteger)ID api:(NSString * _Nullable)api response:(NSURLResponse* _Nullable)response responseObject:(id _Nullable)responseobject  error:(NSError * _Nullable)error;
++ (void)printLogWithRequestID:(NSInteger)ID request:(MTHTTPRequest * _Nullable)request response:(NSURLResponse* _Nullable)response responseObject:(id _Nullable)responseobject  error:(NSError * _Nullable)error;
 
 
 @end
