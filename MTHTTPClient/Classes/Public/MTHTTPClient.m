@@ -73,31 +73,8 @@ static dispatch_once_t onceToken;
 - (void)requestWithAPI:(NSObject<MTHTTPClientAPIProtocol> *)api
       andConfiguration:(NSObject <MTHTTPClientConfigProtocol> *) config
             completion:(MTHTTPRequestCompletion)completion {
-    MTHTTPRequest* request;
-    Class modelClass;
-    NSString * className = nil;
-    if([api respondsToSelector:@selector(modelClass)]){
-        modelClass = [api modelClass];
-        if(modelClass){
-            className = NSStringFromClass([api modelClass]);
-        }
-    }
-    NSDictionary * paramDic = @{};
-    if([api respondsToSelector:@selector(param)]){
-        paramDic = [api param];
-    }
-    BOOL useCache = NO;
-    if([api respondsToSelector:@selector(useCache)]){
-        useCache = [api useCache];
-    }
-    request = [MTHTTPRequest requestWithApi:api andConfiguration:config];
-    
-    if([api method]  == MTHTTPMethodGET){
-        [request executeGetRequestCompletion:completion];
-    }else {
-        [request executePostRequestCompletion:completion];
-    }
-    
+    MTHTTPRequest* request = [MTHTTPRequest requestWithApi:api andConfiguration:config];
+    [request requestWithCompletion:completion];
 }
 
 - (void)requestWithAPI:(NSObject<MTHTTPClientAPIProtocol> *)api completion:(MTHTTPRequestCompletion)completion {

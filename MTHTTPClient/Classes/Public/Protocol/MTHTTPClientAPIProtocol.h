@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol MTHTTPClientAPIProtocol <NSObject>
 - (MTHTTPMethod)method;
+- (NSString *)methodString;
 - (NSString *)path;
 - (NSDictionary*)param;
 @optional

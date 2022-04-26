@@ -12,6 +12,7 @@
 typedef enum : NSUInteger {
     MTHTTPMethodGET,
     MTHTTPMethodPOST,
+    MTHTTPMethodPUT,
 } MTHTTPMethod;
 
 

@@ -48,13 +48,10 @@ NS_ASSUME_NONNULL_BEGIN
 
  
 @property (nonatomic, weak)id<YKHTTPRequestDelegate> delegate;
- 
-/// POST请求
-- (void)executePostRequestCompletion:(MTHTTPRequestCompletion)completion;
 
-/// Get请求
-- (void)executeGetRequestCompletion:(MTHTTPRequestCompletion)completion;
- 
+
+- (void)requestWithCompletion:(MTHTTPRequestCompletion)completion;
+
 /// 取消
 - (void)cancel;
 
