@@ -133,10 +133,8 @@ static int _requestId = 0;
 
 - (void)requestWithCompletion:(MTHTTPRequestCompletion)completion {
     _completion = completion;
-    NSString *httpMethod = @"GET";
-    if([self.api respondsToSelector:@selector(methodString)]){
-        httpMethod = [self.api methodString];
-    }
+    NSString *httpMethod = @[@"GET",@"POST",@"PUT"][(NSInteger)[self.api method]];
+     
     NSString *baseUrl =@"";
     if([self.configuration respondsToSelector:@selector(baseUrl)]) {
         baseUrl = [self.configuration baseUrl];

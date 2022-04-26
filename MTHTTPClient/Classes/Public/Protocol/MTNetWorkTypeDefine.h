@@ -10,7 +10,7 @@
 #define MTNetWorkTypeDefine_h
 
 typedef enum : NSUInteger {
-    MTHTTPMethodGET,
+    MTHTTPMethodGET = 0,
     MTHTTPMethodPOST,
     MTHTTPMethodPUT,
 } MTHTTPMethod;
